@@ -2,11 +2,19 @@
 \usepackage[utf8]{inputenc}
 \usepackage{VassorTitle}
 \usepackage[super]{nth}
+\usepackage{lettrine}
+\usepackage{xstring}
 \usepackage{todonotes}
 
 \institution{École polytechnique fédérale de Lausanne}
 \project{\nth{1} semester report}
 \supervisor{Pr.~\textsc{Vinck}}
+
+%\renewcommand\paragraph[1]
+%{
+%	\lettrine{\StrLeft #1 {1}}{\StrGobbleLeft #1 {1}}
+%}
+% TODO : Lettrine paragraphe
 
 
 
@@ -56,6 +64,34 @@ We are trying to provide a first raw classification of uncertainties we are expe
 	\item Study the activity domain.
 	\item Find an other company in a more advanced stage.
 \end{itemize}
+\section{Objectives and general approaches}
+\paragraph{Introduction }During the second semester, our goal is to observe the startup SqeedTime, to highlight some correlations between some signals, some events or tendencies. We will have to approaches of this problem.
+
+\paragraph{Precise observation}Our first approach is to make some hypothesis on which signals could be correlated or not, and to gather precise datas to verify these hypothesis or not. This approach requires two steps : 
+\begin{itemize}
+	\item We have to be able to formulate precise and simple enough hypothesis. Making too general or too complex hypothesis would lead not to search for specific behavior, leading in the failure of the verification. This approach does not aim for an exhaustive model of correlations\footnote{If specialists of the field still encounter difficulties, it is definitivelly not possible for us, in such a short amount of time and of knowledge.}.
+	\item Once these points are well defined, we then have to develop specific tools to evaluate the signals. Here, the goal is to develop an high-level framework for data analysis, i.e. to guess which metrics would be significant for the evaluation, then to work on a way to compute this metric, and finally to have a relevant way to mesure the data needed for these calculations.
+\end{itemize}
+Notice that this approach is really uncertain, which is kind of ironic. Even if it is possible to make a good hypothesis, which then appears to be relevant with time, it is possible that this approach leads to a complete fail as well. Also, even if the developped framework appears to be relevant in our case, one should test it with other startups to verify its relevance.
+
+This approach requires an high amount of work before starting the actual observation, but then it only consists in gathering data and verifing or invalidate the hypothesis.
+\paragraph{General observation}Our second approach is the exact opposite of the first one. This time, we observe the startup as an external observer, that is we consider the startup globally. After observing the whole startup for a given amount of time, we try to get important events, and finally to identify the causes of these events. This approach does not focus on events \emph{a priori}. With this approach, we will have global tendencies, global causes for events, but we won't focus on a single event, or on single causes. It is more a reverse engineering of the uncertainty problem. 
+\begin{itemize}
+	\item First, we have to define which data we want to collect, which rate, etc. The more types of data and the more fined-grained, the more precise will be the analysis, but the harder to collect, store, and analyse. We have to make a good trade-off, with these different parameters.
+	\item Once our data set is collected, we have a huge step of analysis. For this approach, we'll have to develop the relevant tools \emph{a posteriori}. 
+\end{itemize}
+This approach needs good heuristics on the parameters of data collection, since it is clearly not possible to get all the information. Making heuristics may lead to holes in the data fabric, network we are building. These hole may be corrected be gathering wide enough events, at a cost of not being able to detect small relations.
+
+This approach requires an high amount of work after the data collection, to understand the causallity processus which happened during the observation.
+\section{Tools for the first method}
+\subsection{Hypothesis}
+\subsection{Metrics}
+\subsection{Analysis}
+\subsection{Data requirements}
+
+\section{Heuristics for the second method}
+\subsection{Data set}
+\subsection{Data rate}
 \chapter{Conclusion}
 \appendix
 \end{document}
